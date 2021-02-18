@@ -12,7 +12,7 @@ for i in "${ports[@]}"
 do
   echo "$i"
 
-  if sudo lsof -Pi :"$i" -sTCP:LISTEN ; then
+  if lsof -Pi :"$i" -sTCP:LISTEN ; then
     echo "Port ${i} in use, please free this port before installation"
     exit
   else

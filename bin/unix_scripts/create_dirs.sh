@@ -14,7 +14,7 @@ if [ -d "$LOGDIR" ]; then
     echo "Log directory exists..."
     echo "Trying recursively remove log directory..."
     echo "Your password is required to run this next command: sudo rm -rf ${LOGDIR}"
-    sudo rm -rf $LOGDIR
+    rm -rf $LOGDIR
 fi
 
 echo "Creating log directory"
