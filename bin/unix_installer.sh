@@ -22,6 +22,10 @@ JAVALIBS="${CODEDIR}/java_libs"                         # /daphne/daphne/java_li
 #########################################################
 
 
+# Copy daphne folder to localdata in root
+echo "Copying files to localdata1 in root..."
+cp -R "${ROOTDIR}" /localdata1/ica/daphne
+echo "Done copying file to localdata1 in root!"
 
 # ----------> Create logs
 bash "${UNIXSCRIPTS}/create_dirs.sh" "${ROOTDIR}"
