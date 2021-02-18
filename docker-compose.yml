@@ -7,17 +7,17 @@ services:
     image: daphne:test
     volumes:
       - type: bind
-        source: ${ROOT_DIR}/daphne
+        source: /localdata1/ica/daphne/daphne
         target: /app/daphne
       - type: bind
-        source: ${ROOT_DIR}/build/scripts
+        source: /localdata1/ica/daphne/build/scripts
         target: /app/scripts
       - type: bind
-        source: ${ROOT_DIR}/logs
+        source: /localdata1/ica/daphne/logs #${ROOT_DIR}/logs
         target: /app/logs
     ports:
-      - "8080:8080"
-      - "8000:8000"
+      - "18080:8080"
+      - "18000:8000"
     depends_on:
       - postgres
     tty: true
